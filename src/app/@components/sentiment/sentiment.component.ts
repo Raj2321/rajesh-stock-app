@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Sentiment } from 'src/app/@model/sentiment';
 import { StockInfoService } from 'src/app/@services/stock-info.service';
 
 @Component({
@@ -68,4 +67,12 @@ export class SentimentComponent implements OnInit {
       return 'https://st2.depositphotos.com/5266903/8456/v/950/depositphotos_84568938-stock-illustration-arrow-down-flat-red-color.jpg';
     }
   }
+}
+
+interface Sentiment {
+  change: number;
+  month: number;
+  mspr: number;
+  symbol: string;
+  year: number;
 }
