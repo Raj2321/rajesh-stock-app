@@ -37,7 +37,7 @@ export class SentimentComponent implements OnInit {
   getSentimentInfo() {
     this.stockService
       .getSentimentInfo(this.symbol, this.fromDate, this.toDate)
-      .subscribe((res: any) => {
+      .subscribe((res) => {
         this.sentimentData = res.data;
         this.symbolName = res.symbol;
       });

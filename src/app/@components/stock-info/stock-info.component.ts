@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { IStocks, Stocks } from 'src/app/@model/stock';
+import { StockInfo, Stocks } from 'src/app/@model/stock';
 import { StockInfoService } from 'src/app/@services/stock-info.service';
 
 @Component({
@@ -10,11 +10,11 @@ import { StockInfoService } from 'src/app/@services/stock-info.service';
 })
 export class StockInfoComponent implements OnInit {
   stockFormGroup: FormGroup;
-  stock: IStocks[] = [];
+  stock: StockInfo[] = [];
   stockList: Stocks[] = [];
   quoteData = [];
 
-  constructor(private stockService: StockInfoService) {}
+  constructor(private readonly stockService: StockInfoService) {}
 
   ngOnInit(): void {
     this.stockFormGroup = new FormGroup({

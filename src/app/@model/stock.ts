@@ -7,7 +7,7 @@ export interface Stocks {
   h: number;
 }
 
-export interface IStocks {
+export interface StockInfo {
   description: string;
   symbol: string;
 }
